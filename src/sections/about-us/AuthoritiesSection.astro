@@ -1,0 +1,25 @@
+---
+import SectionContainer from "@uiComponents/SectionContainer.astro";
+import Container from "@components/ui/Container.astro";
+import { authorities } from "@data/authorities";
+import AuthorityMessage from "@components/about-us/AuthorityMessage.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <div
+      class="w-full grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+    >
+      {
+        authorities.map(({ url, name, role, message }) => (
+          <AuthorityMessage
+            url={url}
+            name={name}
+            role={role}
+            message={message}
+          />
+        ))
+      }
+    </div>
+  </Container>
+</SectionContainer>

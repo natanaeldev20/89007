@@ -1,6 +1,6 @@
-import student from "@assets/experiencias/estudiante.png";
-import student2 from "@assets/experiencias/estudiante-2.png";
-import student3 from "@assets/experiencias/estudiante-3.png";
+import student from "@assets/experiences/student.png";
+import student2 from "@assets/experiences/student-2.png";
+import student3 from "@assets/experiences/student-3.png";
 
 export const experiences = [
   {

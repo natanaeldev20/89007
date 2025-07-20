@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import image from "@assets/form/student.png";
+import StartForm from "@components/home/StartForm";
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section class="w-full box-border p-4 md:p-0 lg:p-0" id={id}>
+  <div class="w-full grid md:grid-cols-1 lg:grid-cols-[30rem_minmax(0,1fr)]">
+    <figure class="w-full bg-89007 flex flex-row justify-center items-end">
+      <Image
+        src={image}
+        alt="Alumna del colegio 89007"
+        format="webp"
+        loading="lazy"
+        class="w-full max-w-[15rem] md:max-w-[15rem] lg:max-w-[28rem]"
+      />
+    </figure>
+    <StartForm client:load />
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import { benefits } from "@data/benefits";
+import BenefitCard from "@components/home/BenefitCard.astro";
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import Container from "@components/ui/Container.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <h2 class="mb-8 text-xl text-center md:text-2xl md:text-start">
+      Formando estudiantes con <span class="text-89007 font-bold"
+        >corazón y excelencia</span
+      >
+    </h2>
+    <div class="w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+      {
+        benefits.map(({ url, title, description, route, color }) => (
+          <BenefitCard
+            url={url}
+            title={title}
+            description={description}
+            route={route}
+            color={color}
+          />
+        ))
+      }
+    </div>
+  </Container>
+</SectionContainer>

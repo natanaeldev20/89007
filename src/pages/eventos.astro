@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroSection from "@components/ui/HeroSection.astro";
+import EventCard from "@components/events/EventCard";
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import SectionEventNews from "@components/ui/SectionEventNews.astro";
+---
+
+<BaseLayout title="Eventos | Institución Educativa N.º 89007">
+  <HeroSection
+    title="Eventos Institucionales"
+    description="Participa en las actividades más importantes del año escolar. Desde celebraciones hasta ferias educativas, cada evento fortalece el vínculo entre estudiantes, docentes y familias."
+    url="https://cademin.org/wp-content/uploads/2024/08/que-es-mejor-estudiar-educacion-infantil-o-primaria.jpg"
+  />
+  <SectionEventNews background="#f2f4f7">
+    <div class="w-full m-auto grid grid-cols-1 gap-4 sm:max-w-xl">
+      <EventCard
+        client:load
+        title="Festival del Día del Logro"
+        description="Celebramos los avances académicos de nuestros estudiantes con presentaciones, actividades y participación de las familias."
+        url="https://prensa.cba.gov.ar/wp-content/uploads/2025/04/FERIA-00121-1.jpg"
+        publicationDate="28 de julio, 2025"
+        eventDate="12 de julio, 2025"
+        location="Patio principal"
+      />
+      <EventCard
+        client:load
+        title="Festival del Día del Logro"
+        description="Celebramos los avances académicos de nuestros estudiantes con presentaciones, actividades y participación de las familias."
+        url="https://web.catamarca.edu.ar/sitio/images/Proyectos_ganadores_de_la_Feria_de_Ciencias_del_Valle_Central_20221.jpg"
+        publicationDate="28 de julio, 2025"
+        eventDate="12 de julio, 2025"
+        location="Patio principal"
+      />
+      <EventCard
+        client:load
+        title="Festival del Día del Logro"
+        description="Celebramos los avances académicos de nuestros estudiantes con presentaciones, actividades y participación de las familias."
+        url="https://ugelmoyobamba.edu.pe/imagen/noticias/feria-nacional-de-ciencia-y-tecnologia_2023-09-21_imagen.jpeg"
+        publicationDate="28 de julio, 2025"
+        eventDate="12 de julio, 2025"
+        location="Patio principal"
+      />
+    </div>
+  </SectionEventNews>
+</BaseLayout>

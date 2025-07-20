@@ -1,0 +1,28 @@
+---
+import SectionContainer from "@uiComponents/SectionContainer.astro";
+import LevelCard from "@components/levels/LevelCard.astro";
+import Container from "@components/ui/Container.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <div
+      class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
+    >
+      <LevelCard
+        url="https://www.usat.edu.pe/web/wp-content/uploads/2024/05/semana-de-la-educacion-inicial.jpg"
+        path="/niveles/educacion-inicial"
+        title="inicial"
+        text="Educacion Inicial"
+        color="#039fcf"
+      />
+      <LevelCard
+        url="https://facultad-educacion.pucp.edu.pe/wp-content/uploads/2023/05/Colegio-La-Union0066_2-scaled.jpg"
+        path="/niveles/educacion-primaria"
+        title="primaria"
+        text="Educacion Primaria"
+        color="#039fcf"
+      />
+    </div>
+  </Container>
+</SectionContainer>

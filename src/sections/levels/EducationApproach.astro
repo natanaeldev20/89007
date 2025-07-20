@@ -1,0 +1,33 @@
+---
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import Card from "@components/ui/Card.astro";
+
+interface CardData {
+  url: string;
+  title: string;
+  content: string;
+  color: string;
+}
+
+interface Props {
+  title: string;
+  array: CardData[];
+}
+
+const { title, array } = Astro.props;
+---
+
+<SectionContainer background="#e8e8e8">
+  <h2 class="text-2xl text-center mb-12 md:text-3xl lg:text-3xl">
+    Enfoque de enseñanza en el <span class="font-bold text-89007">{title}</span>
+  </h2>
+  <div
+    class="max-w-6xl m-auto grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      array.map(({ url, title, content, color }) => (
+        <Card url={url} title={title} content={content} color={color} />
+      ))
+    }
+  </div>
+</SectionContainer>

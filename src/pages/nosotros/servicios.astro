@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroSection from "@components/ui/HeroSection.astro";
+import Tabs from "@components/about-us/Tabs";
+import Location from "@uiComponents/Location.astro";
+---
+
+<BaseLayout title="Servicios | Institución Educativa N.º 89007">
+  <HeroSection
+    title="Nuestros Servicios"
+    description="Brindamos servicios educativos y complementarios que fortalecen el aprendizaje, el bienestar y la formación integral de nuestros estudiantes, asegurando un entorno escolar de calidad y atención permanente."
+    url="https://cdn.shopify.com/s/files/1/0614/5776/0511/files/Playroom-Redfin-Blog-Post-Banner.jpg?v=1685333319"
+  />
+  <Tabs client:load />
+  <Location />
+</BaseLayout>

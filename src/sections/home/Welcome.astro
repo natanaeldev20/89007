@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import director from "@assets/authorities/director.jpg";
+---
+
+<section class="w-full bg-white mb-12 md:h-auto">
+  <div class="w-full grid grid-cols-1 md:grid-cols-2">
+    <div class="grid place-content-center px-6 py-12 md:p-12 md:py-50">
+      <span class="block w-40 h-[10px] bg-89007"></span>
+      <h1 class="py-4 font-bold uppercase text-89007 text-2xl md:text-3xl">
+        <span>Bienvenidos a la</span> Institución Educativa N° 89007
+      </h1>
+      <p class="text-base mb-4">
+        "Es un honor darles la bienvenida a la Institución Educativa N.° 89007,
+        un lugar donde cada niño y niña inicia un camino de aprendizajes,
+        valores y sueños. Juntos, construimos un futuro lleno de posibilidades."
+      </p>
+      <p class="text-sm italic text-gray-600 font-medium">
+        — Prof. Juan Pérez, Director
+      </p>
+    </div>
+    <figure class="w-full md:h-full">
+      <Image
+        class="w-full object-cover shadow-xs aspect-square md:aspect-square md:rounded-bl-[16rem] md:h-full"
+        alt="Director"
+        src={director}
+        format="webp"
+        loading="eager"
+      />
+    </figure>
+  </div>
+</section>

@@ -19,7 +19,7 @@ const Header = () => {
           <a href="/" className="flex items-center gap-4">
             <img
               className="w-full max-w-[2rem] sm:max-w-[2.5rem]"
-              src="/logo-89007.png"
+              src="/logo.PNG"
               alt="logo"
             />
             <span className="text-lg font-medium text-89007 sm:text-xl">

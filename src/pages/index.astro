@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "@layouts/BaseLayout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from "@sections/home/Hero.astro";
+import Welcome from "@sections/home/Welcome.astro";
+import News from "@sections/home/News.astro";
+import Benefits from "@sections/home/Benefits.astro";
+import Experiences from "@sections/home/Experiences.astro";
+import Methodology from "@sections/home/Methodology.astro";
+import FormSection from "@sections/home/FormSection.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Institución Educativa N.º 89007">
+  <Hero />
+  <Welcome />
+  <News />
+  <Benefits />
+  <Methodology />
+  <Experiences />
+  <FormSection id="formulario" />
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import { gallery } from "@data/gallery";
+import GalleryItem from "@components/about-us/GalleryItem";
+---
+
+<section class="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+  {
+    gallery.map(({ url, title }) => (
+      <GalleryItem client:load url={url} title={title} />
+    ))
+  }
+</section>

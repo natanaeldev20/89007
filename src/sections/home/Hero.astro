@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import hero from "@assets/students/student-3.png";
+---
+
+<section class="w-full bg-89007">
+  <div class="max-w-xl m-auto lg:grid lg:grid-cols-2 gap-4 lg:max-w-7xl">
+    <article
+      class="w-full flex justify-center flex-col gap-4 p-8 items-center md:items-start lg:items-start lg:pt-16 lg:pb-16"
+    >
+      <p
+        class="leading-[1.6] text-center text-white mb-8 text-2xl md:text-left md:text-3xl lg:text-[2em] lg:text-left"
+      >
+        En la <span class="font-bold">Institución Educativa N° 89007</span>, tu
+        hijo desarrolla las <span class="font-extrabold">herramientas</span> para
+        <span class="font-bold">transformar su mundo</span>
+      </p>
+      <a
+        href="#formulario"
+        class="bg-white shadow-xl p-4 px-6 text-lg font-bold rounded-4xl w-max text-[#0069aa] md:text-xl lg:text-xl"
+      >
+        Solicita información
+      </a>
+    </article>
+    <figure
+      class="grid pl-8 pr-8 md:place-content-center md:pr-8 md:pl-8 lg:place-content-end"
+    >
+      <Image
+        src={hero}
+        alt="Estudiantes del colegio 89007"
+        loading="eager"
+        format="webp"
+        loading="eager"
+      />
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+import ExperienceCard from "@components/home/ExperienceCard";
+import { experiences } from "@data/experiences";
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import Container from "@components/ui/Container.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <h2
+      class="uppercase text-center text-89007 mb-2 text-lg md:text-xl lg:text-2xl"
+    >
+      Nuestros alumnos
+    </h2>
+    <h2
+      class="uppercase text-center font-bold text-89007 mb-8 text-2xl md:text-3xl lg:text-4xl"
+    >
+      NOS CUENTAN SUS EXPERIENCIAS
+    </h2>
+    <div
+      class="w-full grid gap-4 mb-8 grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
+    >
+      {
+        experiences.map(({ url, alt, name, role, color, content }) => (
+          <ExperienceCard
+            client:visible
+            url={url.src}
+            name={name}
+            alt={alt}
+            role={role}
+            color={color}
+            content={content}
+          />
+        ))
+      }
+    </div>
+  </Container>
+</SectionContainer>

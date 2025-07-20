@@ -1,0 +1,23 @@
+---
+import SectionContainer from "@components/ui/SectionContainer.astro";
+
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<SectionContainer background="#039fcf">
+  <div class="max-w-4xl m-auto">
+    <h2 class="text-center text-white mb-6 text-2xl md:text-3xl lg:text-3xl">
+      ¿Por qué elegir a la Institución Educativa N° 89007 como <span
+        class="font-bold text-yellow-400">{title}</span
+      > para tus hijos?
+    </h2>
+    <p class="text-base text-white text-start md:text-center">
+      {body}
+    </p>
+  </div>
+</SectionContainer>

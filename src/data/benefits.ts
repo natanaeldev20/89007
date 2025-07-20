@@ -1,3 +1,5 @@
+import image from "@assets/benefits/image-1.jpg";
+
 export const benefits = [
   {
     id: 1,

@@ -1,0 +1,26 @@
+---
+import SectionContainer from "@uiComponents/SectionContainer.astro";
+import Container from "@components/ui/Container.astro";
+import Mission from "@components/about-us/Mission.astro";
+import Vision from "@components/about-us/Vision.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <p class="text-base mb-8 text-justify">
+      Somos la Institución Educativa N.° 89007 de Chimbote, una escuela
+      comprometida con la formación integral de niños y niñas en el nivel
+      Primaria. Contamos con una sólida propuesta educativa centrada en valores,
+      el desarrollo de habilidades sociales, emocionales y cognitivas, y el
+      fortalecimiento del sentido de responsabilidad y pertenencia. A lo largo
+      de los años, hemos contribuido con dedicación y vocación a la formación de
+      generaciones preparadas para afrontar los desafíos de la sociedad actual,
+      priorizando siempre una enseñanza inclusiva, participativa y de calidad,
+      al servicio de nuestra comunidad.
+    </p>
+    <div class="w-full grid gap-8 grid-cols-1">
+      <Mission />
+      <Vision />
+    </div>
+  </Container>
+</SectionContainer>

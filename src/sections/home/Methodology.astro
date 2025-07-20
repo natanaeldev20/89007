@@ -1,0 +1,40 @@
+---
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import MethodologyCard from "@components/home/MethodologyCard.astro";
+import Container from "@components/ui/Container.astro";
+import initial from "@assets/levels/initial.png";
+import primary from "@assets/levels/primary-1.png";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <header class="w-full p-4 pt-8 pb-8">
+      <p class="text-center mb-2 text-lg md:text-xl lg:text-2xl">
+        Una educación integral para formar líderes
+      </p>
+      <h2
+        class="font-bold text-89007 text-center text-2xl md:text-3xl lg:text-3xl"
+      >
+        capaces de hacer un mundo mejor para todos.
+      </h2>
+    </header>
+    <div
+      class="w-full grid gap-12 md:gap-8 md:grid-cols-2 lg:gap-8 lg:grid-cols-2"
+    >
+      <MethodologyCard
+        url={initial.src}
+        color="#f7971c"
+        path="/niveles/educacion-inicial"
+        text="Inicial"
+        title="Imagen de la educación infantil en la Institución Educativa N° 89007"
+      />
+      <MethodologyCard
+        url={primary.src}
+        color="#82bb27"
+        path="/niveles/educacion-primaria"
+        text="Primaria"
+        title="Imagen de la educación primaria en la Institución Educativa N° 89007"
+      />
+    </div>
+  </Container>
+</SectionContainer>

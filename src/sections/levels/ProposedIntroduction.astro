@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  url: string;
+}
+
+const { title, body, url } = Astro.props;
+---
+
+<section class="w-full bg-white">
+  <div
+    class="grid m-auto max-w-lg md:m-0 md:grid-cols-2 md:w-full md:max-w-full lg:grid-cols-2 lg:max-w-full lg:w-full"
+  >
+    <figure class="w-full">
+      <img class="w-full h-full object-cover" src={url} alt={title} />
+    </figure>
+    <div
+      class="w-full p-6 flex flex-col items-center justify-center md:p-16 lg:p-16"
+    >
+      <div>
+        <h2
+          class="font-normal mb-4 text-89007 text-center text-2xl md:text-3xl md:text-start lg:text-start lg:text-3xl"
+        >
+          Propuesta educativa <span class="font-bold">{title}</span>
+        </h2>
+        <p class="text-base">
+          {body}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

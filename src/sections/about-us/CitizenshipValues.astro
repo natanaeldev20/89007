@@ -1,0 +1,28 @@
+---
+import SectionContainer from "@uiComponents/SectionContainer.astro";
+import { values } from "@data/values";
+import Card from "@uiComponents/Card.astro";
+import Container from "@components/ui/Container.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <span class="block w-40 h-[10px] bg-89007"></span>
+    <h2 class="font-bold text-89007 pt-4 mb-4 text-2xl md:text-3xl lg:text-3xl">
+      Educación en valores y ciudadanía
+    </h2>
+    <p class="text-base mb-8 text-justify">
+      Desde cada área del currículo y a través de actividades transversales,
+      promovemos valores como:
+    </p>
+    <div
+      class="grid gap-8 items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+    >
+      {
+        values.map(({ title, content, url, color }) => (
+          <Card title={title} content={content} url={url} color={color} />
+        ))
+      }
+    </div>
+  </Container>
+</SectionContainer>

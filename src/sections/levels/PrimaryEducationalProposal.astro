@@ -1,0 +1,44 @@
+---
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import Container from "@components/ui/Container.astro";
+import Proposal from "@components/levels/Proposal.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <header class="w-full">
+      <h2 class="text-2xl mb-12 text-center text-89007 md:text-3xl lg:text-3xl">
+        Propuesta educativa en el <span class="font-bold">nivel Primaria</span>
+      </h2>
+    </header>
+    <div class="grid grid-cols-1 gap-12">
+      <Proposal
+        title="centrado en el estudiante"
+        body="En la Institución Educativa N.º 89007 impulsamos un enfoque centrado en el estudiante, donde cada niño es protagonista de su aprendizaje. Fomentamos la autonomía, el pensamiento crítico y la participación activa mediante estrategias adaptadas a sus necesidades, actividades dinámicas y el acompañamiento docente, fortaleciendo así sus habilidades y su confianza."
+        url="https://www.universidadviu.com/sites/universidadviu.com/files/images/GU%20Educacion_Primaria.jpg"
+        orderTextDesktop="lg:order-1"
+        orderImageDesktop="lg:order-2"
+        orderTextMobile="order-1"
+        orderImageMobile="order-2"
+      />
+      <Proposal
+        title="Grupal"
+        body="En la Institución Educativa N.º 89007 promovemos el aprendizaje grupal para fortalecer la colaboración, el respeto y la comunicación. A través del trabajo en equipo, los estudiantes desarrollan habilidades sociales, asumen responsabilidades y construyen conocimiento de forma conjunta, reforzando el sentido de pertenencia."
+        url="https://www.tuproyectodevida.pe/wp-content/uploads/2020/11/%C2%BFQu%C3%A9-habilidades-tienen-un-maestro-de-Educaci%C3%B3n-Primaria-1200x628.jpg"
+        orderTextDesktop="lg:order-2"
+        orderImageDesktop="lg:order-1"
+        orderTextMobile="order-1"
+        orderImageMobile="order-2"
+      />
+      <Proposal
+        title="Individual"
+        body="En la Institución Educativa N.º 89007 valoramos el aprendizaje individual, permitiendo que cada estudiante avance a su ritmo, desarrolle autonomía y fortalezca su pensamiento crítico mediante actividades personalizadas y acompañamiento docente."
+        url="https://unsm.edu.pe/wp-content/uploads/2017/01/portada-primaria.jpg"
+        orderTextDesktop="lg:order-1"
+        orderImageDesktop="lg:order-2"
+        orderTextMobile="order-1"
+        orderImageMobile="order-2"
+      />
+    </div>
+  </Container>
+</SectionContainer>

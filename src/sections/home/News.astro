@@ -1,0 +1,63 @@
+---
+const news = [
+  {
+    id: 1,
+    url: "https://www.lhs.edu.pe/wp-content/uploads/2022/06/diamadreinicial.jpg",
+    title:
+      "Este Mayo se celebra el dia de la Madre en la Institucion Educativa 89007",
+  },
+  {
+    id: 2,
+    url: "https://www.colegiostarita.edu.pe/wp-content/uploads/2017/08/Colegio-Santa-Rita-Colegios-en-Jesus-Maria-Dia-del-Padre-28.jpg",
+    title:
+      "Este Mayo se celebra el dia del padre en la Institucion Educativa 89007",
+  },
+  {
+    id: 3,
+    url: "https://rsdradio.s3.sa-east-1.amazonaws.com/styles/opengraph/s3/2024-05/San%20Pedrito.jpg?itok=rHlIUktv",
+    title: "Hoy se celebra San Pedrito",
+  },
+];
+import Button from "@uiComponents/Button.astro";
+import NewsCard from "@components/home/NewsCard.astro";
+import SectionContainer from "@components/ui/SectionContainer.astro";
+import Container from "@components/ui/Container.astro";
+---
+
+<SectionContainer background="white">
+  <Container>
+    <span class="block w-25 h-[10px] bg-89007"></span>
+    <h2
+      class="uppercase text-89007 pt-4 font-bold color-89007 mb-8 text-2xl md:text-3xl lg:text-3xl"
+    >
+      Últimas noticias
+    </h2>
+    <div
+      class="w-full mb-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
+      {news.map(({ url, title }) => <NewsCard url={url} title={title} />)}
+    </div>
+    <div class="w-full grid place-content-center">
+      <Button
+        url="noticias"
+        bg="#ffc223"
+        color="#000"
+        transform="none"
+        weight="600"
+        text="Ver más noticias"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          ><path
+            fill="#000"
+            d="M12.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L16.586 13H5a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414"
+            ><path><svg> </svg> </path>
+          </path>
+        </svg></Button
+      >
+    </div>
+  </Container>
+</SectionContainer>
