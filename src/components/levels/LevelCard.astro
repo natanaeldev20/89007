@@ -1,0 +1,41 @@
+---
+interface Props {
+  url: string;
+  path: string;
+  title: string;
+  text: string;
+  color: string;
+}
+
+const { url, path, title, text, color } = Astro.props;
+---
+
+<article class="w-full rounded-lg">
+  <figure class="w-full shadow-xl">
+    <img
+      class="w-full aspect-[16/11] object-cover rounded-tl-xl rounded-tr-xl"
+      src={url}
+      alt={title}
+    />
+    <figcaption class="sr-only">{title}</figcaption>
+  </figure>
+  <div
+    class="p-6 grid place-content-center rounded-bl-xl rounded-br-xl"
+    style=`background-color: ${color};`
+  >
+    <a
+      class="flex text-89007 items-center justify-center gap-3 bg-white text-base p-4 px-8 font-bold rounded-[3rem] shadow-xl"
+      href={path}
+      >{text}<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="#039fcf"
+          d="M12.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L16.586 13H5a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414"
+        ></path></svg
+      ></a
+    >
+  </div>
+</article>

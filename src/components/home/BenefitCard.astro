@@ -1,0 +1,48 @@
+---
+import Button from "@uiComponents/Button.astro";
+
+interface Props {
+  url: string;
+  title: string;
+  description: string;
+  route: string;
+  color: string;
+}
+
+const { url, title, description, route, color } = Astro.props;
+---
+
+<article class="shadow-xl rounded-2xl" style=`background-color: ${color};`>
+  <figure class="w-full">
+    <img
+      class="w-full aspect-video object-cover rounded-t-2xl"
+      src={url}
+      alt={title}
+      loading="lazy"
+    />
+  </figure>
+  <div class="w-full p-8 text-white">
+    <h3 class="text-xl font-semibold mb-4 md:text-2xl">{title}</h3>
+    <p class="text-base mb-8">{description}</p>
+    <Button
+      url={route}
+      bg="#fff"
+      color="#000"
+      transform="none"
+      weight="600"
+      text="Conoce más"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="#000"
+          d="M12.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L16.586 13H5a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414"
+          ><path><svg> </svg> </path>
+        </path>
+      </svg></Button
+    >
+  </div>
+</article>

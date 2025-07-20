@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  url: string;
+  orderTextMobile?: string;
+  orderTextDesktop?: string;
+  orderImageMobile?: string;
+  orderImageDesktop?: string;
+}
+
+const {
+  title,
+  body,
+  url,
+  orderTextMobile,
+  orderTextDesktop,
+  orderImageMobile,
+  orderImageDesktop,
+} = Astro.props;
+---
+
+<article class="w-full flex gap-0 flex-col md:flex-col lg:gap-8 lg:flex-row">
+  <div
+    class={`w-full grid place-content-center ${orderTextMobile} ${orderTextDesktop}`}
+  >
+    <span class="block w-40 h-[10px] bg-89007"></span>
+    <h3 class="text-2xl pt-4 mb-4 text-89007 md:text-3xl lg:text-3xl">
+      Aprendizaje <span class="font-bold">{title}</span>
+    </h3>
+    <p class="text-base mb-8">
+      {body}
+    </p>
+  </div>
+  <figure class={`w-full ${orderImageMobile} ${orderImageDesktop}`}>
+    <img
+      class="w-full aspect-video object-cover shadow-xl rounded-lg"
+      src={url}
+      alt={title}
+    />
+    <figcaption class="sr-only">{title}</figcaption>
+  </figure>
+</article>

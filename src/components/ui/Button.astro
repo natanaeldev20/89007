@@ -1,0 +1,19 @@
+---
+interface Props {
+  url: string;
+  bg: string;
+  color: string;
+  transform: "none" | "capitalize" | "lowercase" | "uppercase";
+  weight: "400" | "600" | "700";
+  text: string;
+}
+
+const { url, bg, color, transform, weight, text } = Astro.props;
+---
+
+<a
+  href={url}
+  style=`background-color: ${bg}; color: ${color}; text-transform: ${transform}; font-weight: ${weight}`
+  class="w-[max-content] p-4 pl-12 pr-12 text-base border-none flex items-center justify-center gap-2 outline-none rounded-[3rem] cursor-pointer shadow-xl"
+  >{text}<slot /></a
+>

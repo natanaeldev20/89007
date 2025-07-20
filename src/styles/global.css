@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-89007 {
+    background-color: #039fcf;
+  }
+
+  .text-89007 {
+    color: #039fcf;
+  }
+}

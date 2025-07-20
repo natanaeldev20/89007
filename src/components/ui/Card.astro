@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  content: string;
+  url: string;
+  color: string;
+}
+
+const { title, content, url, color } = Astro.props;
+---
+
+<article class="w-full h-full flex flex-col rounded-2xl shadow-xl">
+  <figure class="w-full">
+    <img
+      class="w-full aspect-video object-cover rounded-t-2xl shadow-2xs"
+      src={url}
+      alt={title}
+    />
+    <figcaption class="sr-only">{title}</figcaption>
+  </figure>
+  <div
+    class="w-full p-6 text-white flex flex-col gap-4 rounded-b-2xl flex-1"
+    style=`background-color: ${color}`
+  >
+    <h3 class="font-semibold text-xl md:text-2xl lg:text-2xl">{title}</h3>
+    <p class="text-base">{content}</p>
+  </div>
+</article>
