@@ -3,13 +3,14 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import SchoolProfile from "@sections/about-us/SchoolProfile.astro";
 import Location from "@uiComponents/Location.astro";
 import HeroSection from "@components/ui/HeroSection.astro";
+import image from "@assets/about-us/students.jpg";
 ---
 
 <BaseLayout title="Quiénes Somos | Institución Educativa N.º 89007">
   <HeroSection
     title="¿Quiénes Somos?"
     description="Conoce la historia, misión y valores que nos definen como una institución educativa comprometida con la formación integral de nuestros estudiantes."
-    url="https://www.usatoday.com/gcdn/presto/2023/05/19/USAT/0a3b7e9b-2d5a-463f-ba91-57b6ccff4bb9-Rodney_LaFleur_1.JPG?crop=4799,2700,x0,y244"
+    url={image.src}
   />
   <SchoolProfile />
   <Location />

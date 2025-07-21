@@ -1,9 +1,7 @@
-import image from "@assets/benefits/image-1.jpg";
-
 export const benefits = [
   {
     id: 1,
-    url: "https://colegiomayordelosandes.edu.co/wp-content/uploads/2019/09/jornada-valores-cma27-1024x683.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753056773/image-1_p99cmq.jpg",
     title: "Educación con valores",
     description:
       "Formamos estudiantes íntegros promoviendo respeto, responsabilidad y compromiso.",
@@ -30,7 +28,7 @@ export const benefits = [
   },
   {
     id: 4,
-    url: "https://www.businessempresarial.com.pe/wp-content/uploads/2024/02/version-2018-183.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753057229/infraestructura_hsladx.jpg",
     title: "Infraestructura adecuada",
     description:
       "Contamos con espacios seguros y adecuados para el aprendizaje activo.",

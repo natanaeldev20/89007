@@ -29,8 +29,8 @@ const Header = () => {
         </figure>
         <nav className="flex items-center sr-only md:not-sr-only">
           <ul className="flex flex-row items-center text-lg gap-4 text-89007">
-            {routes.map(({ href, text }) => (
-              <Link href={href} text={text} />
+            {routes.map(({ id, href, text }) => (
+              <Link key={id} href={href} text={text} />
             ))}
           </ul>
         </nav>
@@ -50,8 +50,8 @@ const Header = () => {
       </div>
       <div ref={menuRef} className="w-full pt-8 text-lg hidden">
         <ul className="flex flex-col text-89007">
-          {routes.map(({ href, text }) => (
-            <LinkMobile href={href} text={text} />
+          {routes.map(({ id, href, text }) => (
+            <LinkMobile key={id} href={href} text={text} />
           ))}
         </ul>
       </div>
