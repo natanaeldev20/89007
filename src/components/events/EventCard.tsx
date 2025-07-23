@@ -25,7 +25,7 @@ const EventCard = ({
         <figure className="bg-white w-[3.5rem] h-[3.5rem] p-1 flex items-center justify-center rounded-full aspect-square border-2 border-[#e2e4e7]">
           <img
             className="w-full max-w-[1.8rem]"
-            src="logo-89007.png"
+            src="logo.PNG"
             alt="Logo de la Institución Educativa N.º 89007"
           />
           <figcaption className="sr-only"></figcaption>

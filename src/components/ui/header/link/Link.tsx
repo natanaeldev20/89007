@@ -5,10 +5,7 @@ interface Props {
 
 const Link = ({ href, text }: Props) => {
   return (
-    <a
-      className="p-3 rounded-lg transition-all duration-200 hover:text-white hover:bg-[#039fcf]"
-      href={href}
-    >
+    <a className="max-w p-1 flex items-center justify-center" href={href}>
       {text}
     </a>
   );

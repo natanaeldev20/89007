@@ -29,6 +29,7 @@ const { title, description, url } = Astro.props;
         class="w-full rounded-lg aspect-video object-cover shadow-xl"
         src={url}
         alt={title}
+        loading="lazy"
       />
     </figure>
   </div>

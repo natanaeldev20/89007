@@ -1,7 +1,7 @@
 export const primaryFocus = [
   {
     id: 1,
-    url: "https://cursosmultimedia.es/wp-content/uploads/2021/03/competencias-en-los-estudiantes-1.png",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/v1753205691/90e4ecee-21b7-421b-955a-3955137aea7c_idfidp.png",
     title: "Desarrollo de competencias",
     content:
       "Promovemos un aprendizaje basado en competencias, donde los estudiantes construyen conocimientos, desarrollan habilidades y actitudes que les permiten desenvolverse en distintos contextos de manera crítica, creativa y responsable.",
@@ -9,7 +9,7 @@ export const primaryFocus = [
   },
   {
     id: 2,
-    url: "https://blog.ecagrupoeducativo.mx/hubfs/girl-with-big-smile-classroom%20%281%29.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/v1753205827/2fd100ff-fcb2-4fcb-8ad4-ccadaf709f37_rctqwc.png",
     title: "Educación centrada en el estudiante",
     content:
       "El estudiante es el protagonista de su aprendizaje. Se fomenta su participación activa, la reflexión, la investigación y la toma de decisiones para fortalecer su autonomía y autoestima.",
@@ -17,7 +17,7 @@ export const primaryFocus = [
   },
   {
     id: 3,
-    url: "https://eligeeducar.cl/content/uploads/2021/04/0001-19393817343-20210406-152452-0000.png",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/v1753205959/13f29805-5149-4514-a442-ca44669f2e8a_lf2gga.png",
     title: "Aprendizaje significativo",
     content:
       "Se parte de los saberes previos, intereses y contextos de los estudiantes para construir nuevos conocimientos que tengan sentido para su vida cotidiana y su comunidad.",

@@ -1,7 +1,7 @@
 export const us = [
   {
     id: 1,
-    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753058500/colegio_zno2fb.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/colegio_zno2fb.jpg",
     title: "Quiénes somos",
     description: "",
     bg: "#3b63c2",
@@ -9,7 +9,7 @@ export const us = [
   },
   {
     id: 2,
-    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753058557/director_z29nuk.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/director_z29nuk.jpg",
     title: "Mensaje de autoridades",
     description: "",
     bg: "#fdc700",
@@ -17,7 +17,7 @@ export const us = [
   },
   {
     id: 3,
-    url: "https://www.sir.edu.pe/storage/2025/02/6.jpg",
+    url: "https://www.sir.edu.pe/storage/2025/02/6.jpg", // No se puede optimizar desde Cloudinary
     title: "Historia",
     description: "",
     bg: "#ff640a",
@@ -25,7 +25,7 @@ export const us = [
   },
   {
     id: 4,
-    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753057229/infraestructura_hsladx.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/infraestructura_hsladx.jpg",
     title: "Infraestructura",
     description: "",
     bg: "#7651b8",
@@ -33,7 +33,7 @@ export const us = [
   },
   {
     id: 5,
-    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753059084/servicioss_2_yu2gg3.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/servicioss_2_yu2gg3.jpg",
     title: "Servicios",
     description: "",
     bg: "#c10007",
@@ -41,7 +41,7 @@ export const us = [
   },
   {
     id: 6,
-    url: "https://res.cloudinary.com/dezz9ntar/image/upload/v1753058951/formacion_mimwxq.jpg",
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/formacion_mimwxq.jpg",
     title: "Formación Integral I.E 89007",
     description: "",
     bg: "#00a63e",

@@ -8,7 +8,7 @@ export const experiences = [
     videoUrl: "ope.mp4",
     url: student,
     alt: "estudiante del colegio 89007",
-    name: "yadira ramirez",
+    name: "angelina paredes",
     role: "alumna",
     color: "#039fcf",
     content:
@@ -19,7 +19,7 @@ export const experiences = [
     videoUrl: "ope.mp4",
     url: student2,
     alt: "estudiante del colegio 89007",
-    name: "lita aguilar",
+    name: "Luna Quiroz Oroya",
     role: "alumna",
     color: "#039fcf",
     content:

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { tabs } from "@data/tabs";
-import "@styles/Tabs.css";
+import "@styles/tabs.css";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);

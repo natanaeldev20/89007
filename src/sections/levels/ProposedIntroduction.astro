@@ -13,7 +13,11 @@ const { title, body, url } = Astro.props;
     class="grid m-auto max-w-lg md:m-0 md:grid-cols-2 md:w-full md:max-w-full lg:grid-cols-2 lg:max-w-full lg:w-full"
   >
     <figure class="w-full">
-      <img class="w-full h-full object-cover" src={url} alt={title} />
+      <img
+        class="w-full h-full aspect-[16/12] object-cover"
+        src={url}
+        alt={title}
+      />
     </figure>
     <div
       class="w-full p-6 flex flex-col items-center justify-center md:p-16 lg:p-16"

@@ -24,8 +24,10 @@ import director from "@assets/authorities/director.jpg";
         class="w-full object-cover shadow-xs aspect-square md:aspect-square md:rounded-bl-[16rem] md:h-full"
         alt="Director"
         src={director}
+        width={600}
         format="webp"
-        loading="eager"
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </figure>
   </div>
