@@ -35,6 +35,7 @@ const Header = () => {
               <span className="text-lg font-medium text-89007 sm:text-xl">
                 I.E. 89007
               </span>
+              <span>hola</span>
             </a>
           </figure>
           <nav className="flex items-center sr-only md:not-sr-only">
