@@ -5,18 +5,20 @@ import { FaCalendarAlt } from "react-icons/fa";
 interface Props {
   title: string;
   description: string;
-  url: string;
-  publicationDate: string;
-  eventDate: string;
   location: string;
+  startDate: Date;
+  endDate: Date;
+  imageUrl: string;
+  createdAt: Date;
 }
 
 const EventCard = ({
   title,
   description,
-  url,
-  publicationDate,
-  eventDate,
+  imageUrl,
+  startDate,
+  endDate,
+  createdAt,
   location,
 }: Props) => {
   return (
@@ -36,17 +38,27 @@ const EventCard = ({
             <PiSealCheckFill color="#0866ff" width={16} height={16} />
           </h4>
           <span className="text-gray-500 text-sm font-semibold">
-            Publicado el {publicationDate}
+            Publicado el{" "}
+            {new Date(createdAt).toLocaleDateString("es-PE", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </span>
         </div>
       </header>
-      <img src={url} alt={title} className="w-full" />
+      <img src={imageUrl} alt={title} className="w-full" />
       <div className="p-5">
         <h3 className="text-xl text-89007 font-semibold mb-2">{title}</h3>
         <p className="text-sm text-gray-600 mb-4">{description}</p>
         <div className="flex items-center justify-between text-sm text-gray-500">
           <span className="flex items-center gap-2">
-            <FaCalendarAlt color="#000" size={20} /> {eventDate}
+            <FaCalendarAlt color="#000" size={20} />{" "}
+            {new Date(startDate).toLocaleDateString("es-PE", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </span>
           <span className="flex items-center gap-2">
             <FaLocationDot color="#000" size={20} /> {location}

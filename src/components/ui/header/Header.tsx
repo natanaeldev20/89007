@@ -41,7 +41,7 @@ const Header = () => {
             <ul className="h-full flex flex-row items-center text-lg text-89007 gap-4">
               <li className="h-full flex group">
                 <a
-                  className="h-full flex items-center justify-center gap-2 px-4"
+                  className="h-full flex  items-center justify-center gap-2 px-4"
                   href="/nosotros"
                 >
                   Nosotros <IoIosArrowDown />

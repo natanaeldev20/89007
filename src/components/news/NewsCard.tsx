@@ -3,7 +3,7 @@ import { PiSealCheckFill } from "react-icons/pi";
 interface Props {
   title: string;
   description: string;
-  publicationDate: string;
+  publicationDate: Date;
   url: string;
 }
 
@@ -25,7 +25,12 @@ const NewsCard = ({ title, description, publicationDate, url }: Props) => {
             <PiSealCheckFill color="#0866ff" width={16} height={16} />
           </h4>
           <span className="text-gray-500 text-sm font-semibold">
-            Publicado el {publicationDate}
+            Publicado el{" "}
+            {new Date(publicationDate).toLocaleDateString("es-PE", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </span>
         </div>
       </header>

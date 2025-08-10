@@ -3,6 +3,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import NewsCard from "@components/news/NewsCard";
 import HeroSection from "@components/ui/HeroSection.astro";
 import SectionEventNews from "@components/ui/SectionEventNews.astro";
+import { getNews } from "@services/newsService";
+
+const news = await getNews();
 ---
 
 <BaseLayout title="Noticias | Institución Educativa N.º 89007">
@@ -13,25 +16,16 @@ import SectionEventNews from "@components/ui/SectionEventNews.astro";
   />
   <SectionEventNews background="#f2f4f7">
     <div class="w-full m-auto py-4 grid grid-cols-1 gap-4 sm:max-w-xl">
-      <NewsCard
-        client:load
-        title="Noticia de prueba"
-        description="¡Orgullo que se suma con resultados! 📊Nuestros estudiantes destacaron en Matemática, demostrando que una educación innovadora hace la diferencia. 🌟¡Sé parte de nuestra familia este 2026!"
-        publicationDate="28 de julio, 2025"
-        url="https://www.akihabara.es/wp-content/uploads/2025/01/Akihabara_esp_kimetsucastle.webp"
-      />
-      <NewsCard
-        title="Noticia de prueba 2"
-        description="💡 Este 15 de julio de 4:00 a 6:15 p. m., diseña soluciones con IA en el taller Construyendo el Futuro con Inteligencia Artificial. 🧠 ¡Explora el mundo tech en UTEC!"
-        publicationDate="28 de julio, 2025"
-        url="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTcU128o-6OdQCgen23NVkP0m162Pg_qC1UuPSvn4-9zOFAx3_k9qwNtJlNQckN2pJWimg7Mt_jxAHIZuFhexLrKq6GhgU6Ssn1Ql4SDqWjYvLvMlXV3SXXL-F0pIoCAcft_vw-q_9KfNcgJ-B9wC1dAdFvIt7TyxILa3RD4p6RCUAQIcLnIWJxRrnpYf4/s2048/513820137_1042842557990362_4884380064539455899_n.jpg"
-      />
-      <NewsCard
-        title="Noticia de prueba 3"
-        description="💡 Este 15 de julio de 4:00 a 6:15 p. m., diseña soluciones con IA en el taller Construyendo el Futuro con Inteligencia Artificial. 🧠 ¡Explora el mundo tech en UTEC!"
-        publicationDate="28 de julio, 2025"
-        url="https://cdnb.artstation.com/p/assets/images/images/051/495/177/large/damien-guimoneau-damienguimoneau-7.jpg?1657454181"
-      />
+      {
+        news.map(({ title, content, imageUrl, publishedAt }) => (
+          <NewsCard
+            title={title}
+            description={content}
+            url={imageUrl}
+            publicationDate={publishedAt}
+          />
+        ))
+      }
     </div>
   </SectionEventNews>
 </BaseLayout>

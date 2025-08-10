@@ -28,6 +28,7 @@ const InitialForm = () => {
         <TextField type="number" placeholder="Número de documento" />
         <TextField type="email" placeholder="Correo electrónico" />
         <TextField type="number" placeholder="Celular" />
+
         <Select name="grados" disabledText="GRADO" options={degrees} />
       </div>
       <TermsAndPrivacyAgreement />

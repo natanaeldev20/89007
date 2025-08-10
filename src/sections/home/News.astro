@@ -1,27 +1,11 @@
 ---
-const news = [
-  {
-    id: 1,
-    url: "https://www.lhs.edu.pe/wp-content/uploads/2022/06/diamadreinicial.jpg",
-    title:
-      "Este Mayo se celebra el dia de la Madre en la Institucion Educativa 89007",
-  },
-  {
-    id: 2,
-    url: "https://www.colegiostarita.edu.pe/wp-content/uploads/2017/08/Colegio-Santa-Rita-Colegios-en-Jesus-Maria-Dia-del-Padre-28.jpg",
-    title:
-      "Este Mayo se celebra el dia del padre en la Institucion Educativa 89007",
-  },
-  {
-    id: 3,
-    url: "https://rsdradio.s3.sa-east-1.amazonaws.com/styles/opengraph/s3/2024-05/San%20Pedrito.jpg?itok=rHlIUktv",
-    title: "Hoy se celebra San Pedrito",
-  },
-];
 import Button from "@uiComponents/Button.astro";
 import NewsCard from "@components/home/NewsCard.astro";
 import SectionContainer from "@components/ui/SectionContainer.astro";
 import Container from "@components/ui/Container.astro";
+import { getNews3 } from "@services/newsService";
+
+const news = await getNews3();
 ---
 
 <SectionContainer background="white">
@@ -35,7 +19,11 @@ import Container from "@components/ui/Container.astro";
     <div
       class="w-full mb-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
     >
-      {news.map(({ url, title }) => <NewsCard url={url} title={title} />)}
+      {
+        news.map(({ title, imageUrl }) => (
+          <NewsCard title={title} url={imageUrl} />
+        ))
+      }
     </div>
     <div class="w-full grid place-content-center">
       <Button

@@ -1,28 +1,37 @@
-import Option from "@uiComponents/form-components/Option";
+import type { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
-interface Options {
-  value: string;
-  text: string;
+interface Option {
+  value: string | number;
+  label: string;
+}
+interface SelectInputProps {
+  label?: string;
+  options: Option[];
+  disabled?: boolean;
+  className?: string;
+  register: UseFormRegisterReturn;
+  error?: FieldError;
 }
 
-interface Props {
-  options: Options[];
-  name: string;
-  disabledText: string;
-}
-
-const Select = ({ options, name, disabledText }: Props) => {
+const Select = ({
+  label,
+  options,
+  disabled = false,
+  className = "",
+  register,
+  error,
+}: SelectInputProps) => {
   return (
     <select
-      name={name}
+      {...register}
+      disabled={disabled}
       className="w-full border-gray-300 border-2 outline-none rounded-md focus:border-transparent p-3 focus:ring-3 focus:ring-[#039fcf]"
-      required
     >
-      <option disabled selected>
-        {disabledText}
-      </option>
-      {options.map((option) => (
-        <Option text={option.text} value={option.value} />
+      <option value="">-- Selecciona una opción --</option>
+      {options.map((opt) => (
+        <option key={opt.value} value={opt.value}>
+          {opt.label}
+        </option>
       ))}
     </select>
   );
