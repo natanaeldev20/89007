@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroSection from "@components/ui/HeroSection.astro";
+import Tabs from "@components/about-us/Tabs";
+import Location from "@uiComponents/Location.astro";
+---
+
+<BaseLayout title="Servicios | Institución Educativa N.º 89007">
+  <HeroSection
+    title="Nuestros Servicios"
+    description="Brindamos servicios educativos y complementarios que fortalecen el aprendizaje, el bienestar y la formación integral de nuestros estudiantes, asegurando un entorno escolar de calidad y atención permanente."
+    url="https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/v1753158678/IMG_20250625_155235_dgd0lw.jpg"
+  />
+  <Tabs client:load />
+  <Location />
+</BaseLayout>

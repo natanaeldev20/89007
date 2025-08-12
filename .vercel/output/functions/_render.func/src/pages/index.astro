@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+import Hero from "@sections/home/Hero.astro";
+import Welcome from "@sections/home/Welcome.astro";
+import News from "@sections/home/News.astro";
+import Benefits from "@sections/home/Benefits.astro";
+import Experiences from "@sections/home/Experiences.astro";
+import Methodology from "@sections/home/Methodology.astro";
+import FormSection from "@sections/home/FormSection.astro";
+---
+
+<BaseLayout title="Institución Educativa N.º 89007">
+  <Hero />
+  <Welcome />
+  <News server:defer />
+  <Benefits />
+  <Methodology />
+  <Experiences />
+  <FormSection id="formulario" />
+</BaseLayout>

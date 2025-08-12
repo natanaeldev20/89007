@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import NewsCard from "@components/news/NewsCard";
+import HeroSection from "@components/ui/HeroSection.astro";
+import SectionEventNews from "@components/ui/SectionEventNews.astro";
+import { getNews } from "@services/newsService";
+
+const news10 = await getNews();
+---
+
+<BaseLayout title="Noticias | Institución Educativa N.º 89007">
+  <HeroSection
+    title="Últimas Noticias"
+    description="Entérate de las actividades, logros y novedades más recientes de nuestra comunidad educativa."
+    url="https://static.wixstatic.com/media/11062b_55fa5302c58f4cebb599f8aa3c7e1b32~mv2.jpeg/v1/fill/w_640,h_554,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_55fa5302c58f4cebb599f8aa3c7e1b32~mv2.jpeg"
+  />
+  <SectionEventNews background="#f2f4f7">
+    <div class="w-full m-auto py-4 grid grid-cols-1 gap-4 sm:max-w-xl">
+      {
+        news10.map(({ title, content, imageUrl, publishedAt }) => (
+          <NewsCard
+            client:load
+            title={title}
+            description={content}
+            url={imageUrl}
+            publicationDate={publishedAt}
+          />
+        ))
+      }
+    </div>
+  </SectionEventNews>
+</BaseLayout>
