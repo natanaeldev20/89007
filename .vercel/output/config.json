@@ -10,6 +10,74 @@
 				"cache-control": "public, max-age=31536000, immutable"
 			},
 			"continue": true
+		},
+		{
+			"src": "^/_server-islands/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_image/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/eventos/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/niveles/educacion-inicial/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/niveles/educacion-primaria/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/niveles/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/formacion-integral/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/historia/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/infraestructura/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/mensaje-de-autoridades/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/quienes-somos/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/servicios/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/nosotros/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/noticias/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/politicas-de-privacidad/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/reclamos/libro-reclamaciones/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/terminos-y-condiciones-de-uso/?$",
+			"dest": "_render"
 		}
 	]
 }

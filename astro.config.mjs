@@ -7,6 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import tsconfigPaths from "vite-tsconfig-paths";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
@@ -14,5 +16,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss(), tsconfigPaths()],
   },
+
   output: "server",
+  adapter: vercel({}),
 });
