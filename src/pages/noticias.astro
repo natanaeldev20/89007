@@ -19,6 +19,7 @@ const news = await getNews();
       {
         news.map(({ title, content, imageUrl, publishedAt }) => (
           <NewsCard
+            client:load
             title={title}
             description={content}
             url={imageUrl}

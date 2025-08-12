@@ -27,6 +27,7 @@ const events = await getEvents();
             createdAt,
           }) => (
             <EventCard
+              client:load
               title={title}
               description={description}
               imageUrl={imageUrl}
