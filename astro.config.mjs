@@ -16,6 +16,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss(), tsconfigPaths()],
   },
-  output: "server",
   adapter: vercel(),
 });
