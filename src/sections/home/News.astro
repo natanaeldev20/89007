@@ -5,8 +5,8 @@ import NewsCard from "@components/home/NewsCard";
 // import NewsList from "@components/home/NewsList";
 import SectionContainer from "@components/ui/SectionContainer.astro";
 import Container from "@components/ui/Container.astro";
-
 const news = await getNews3();
+export const prerender = true;
 ---
 
 <SectionContainer background="white">
@@ -22,7 +22,7 @@ const news = await getNews3();
     >
       {
         news.map(({ title, imageUrl }) => (
-          <NewsCard client:load title={title} url={imageUrl} />
+          <NewsCard server:defer client:load title={title} url={imageUrl} />
         ))
       }
       <!-- <NewsList client:load /> -->
