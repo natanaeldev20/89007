@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroSection from "@components/ui/HeroSection.astro";
+import EventCard from "@components/events/EventCard";
+import SectionEventNews from "@components/ui/SectionEventNews.astro";
+import { getEvents } from "@services/eventService";
+const events = await getEvents();
+---
+
+<BaseLayout title="Eventos | Institución Educativa N.º 89007">
+  <HeroSection
+    title="Eventos Institucionales"
+    description="Participa en las actividades más importantes del año escolar. Desde celebraciones hasta ferias educativas, cada evento fortalece el vínculo entre estudiantes, docentes y familias."
+    url="https://cademin.org/wp-content/uploads/2024/08/que-es-mejor-estudiar-educacion-infantil-o-primaria.jpg"
+  />
+  <SectionEventNews background="#f2f4f7">
+    <div class="w-full m-auto grid grid-cols-1 gap-4 sm:max-w-xl">
+      {
+        events.map(
+          ({
+            title,
+            description,
+            location,
+            startDate,
+            endDate,
+            imageUrl,
+            createdAt,
+          }) => (
+            <EventCard
+              client:load
+              title={title}
+              description={description}
+              imageUrl={imageUrl}
+              location={location}
+              startDate={startDate}
+              createdAt={createdAt}
+              endDate={endDate}
+            />
+          )
+        )
+      }
+    </div>
+  </SectionEventNews>
+</BaseLayout>
