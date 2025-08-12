@@ -1,8 +1,11 @@
 ---
 import Button from "@uiComponents/Button.astro";
-import NewsList from "@components/home/NewsList";
+import { getNews3 } from "@services/newsService";
+import NewsCard from "@components/home/NewsCard";
 import SectionContainer from "@components/ui/SectionContainer.astro";
 import Container from "@components/ui/Container.astro";
+
+const news = await getNews3();
 ---
 
 <SectionContainer background="white">
@@ -16,7 +19,11 @@ import Container from "@components/ui/Container.astro";
     <div
       class="w-full mb-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
     >
-      <NewsList client:load />
+      {
+        news.map(({ title, imageUrl }) => (
+          <NewsCard title={title} url={imageUrl} />
+        ))
+      }
     </div>
     <div class="w-full grid place-content-center">
       <Button
