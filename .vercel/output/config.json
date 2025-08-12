@@ -78,6 +78,10 @@
 		{
 			"src": "^/terminos-y-condiciones-de-uso/?$",
 			"dest": "_render"
+		},
+		{
+			"src": "^/$",
+			"dest": "_render"
 		}
 	]
 }
