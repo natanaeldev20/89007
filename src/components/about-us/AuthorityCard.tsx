@@ -6,11 +6,12 @@ interface Props {
   src: string;
   alt: string;
   name: string;
+  lastName: string;
   role: string;
   message: string;
 }
 
-const AuthorityCard = ({ src, alt, name, role, message }: Props) => {
+const AuthorityCard = ({ src, alt, name, lastName, role, message }: Props) => {
   const modalRef = useRef<HTMLDialogElement | null>(null);
 
   const handleOpenModal = () => {
@@ -57,7 +58,7 @@ const AuthorityCard = ({ src, alt, name, role, message }: Props) => {
           <div className="w-full p-8 pr-14">
             <p className="text-base mb-4">{message}</p>
             <p className="text-sm font-medium text-89007">
-              {name}, {role}
+              {name} {lastName}, {role}
             </p>
           </div>
         </div>
@@ -77,7 +78,9 @@ const AuthorityCard = ({ src, alt, name, role, message }: Props) => {
           </button>
         </figure>
         <div className="p-4 text-center">
-          <h3 className="text-[1.1em] font-semibold text-89007">{name}</h3>
+          <h3 className="text-[1.1em] font-semibold text-89007">
+            {name} {lastName}
+          </h3>
           <p className="text-sm font-medium">{role}</p>
         </div>
       </article>

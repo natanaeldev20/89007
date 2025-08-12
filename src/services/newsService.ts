@@ -8,10 +8,12 @@ interface News {
   imageUrl: string;
 }
 
+const API_URL = import.meta.env.PUBLIC_API_URL;
+
 export const getNews3 = async (): Promise<News[]> => {
   try {
     const { data } = await axios.get<{ news: News[] }>(
-      "http://localhost:3000/api/school-news/latest3"
+      `${API_URL}/api/school-news/latest3`
     );
 
     if (!Array.isArray(data.news)) {
@@ -28,7 +30,7 @@ export const getNews3 = async (): Promise<News[]> => {
 export const getNews = async (): Promise<News[]> => {
   try {
     const { data } = await axios.get<{ news: News[] }>(
-      "http://localhost:3000/api/school-news/latest"
+      `${API_URL}/api/school-news/latest`
     );
 
     if (!Array.isArray(data.news)) {

@@ -11,10 +11,12 @@ interface Event {
   createdAt: Date;
 }
 
+const API_URL = import.meta.env.PUBLIC_API_URL;
+
 export const getEvents = async (): Promise<Event[]> => {
   try {
     const { data } = await axios.get<{ events: Event[] }>(
-      `http://localhost:3000/api/school-events/latest`
+      `${API_URL}/api/school-events/latest`
     );
 
     if (!Array.isArray(data.events)) {
