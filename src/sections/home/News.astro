@@ -21,7 +21,7 @@ const news = await getNews3();
     >
       {
         news.map(({ title, imageUrl }) => (
-          <NewsCard title={title} url={imageUrl} />
+          <NewsCard client:load title={title} url={imageUrl} />
         ))
       }
     </div>
