@@ -1,6 +1,6 @@
 import axios from "axios";
 
-interface Event {
+export interface Event {
   id: string;
   title: string;
   description: string;

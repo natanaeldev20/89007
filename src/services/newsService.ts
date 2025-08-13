@@ -1,6 +1,6 @@
 import axios from "axios";
 
-interface News {
+export interface News {
   id: string;
   title: string;
   content: string;

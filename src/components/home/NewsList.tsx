@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import NewsCard from "@components/home/NewsCard";
 
 interface News {
   id: string;
@@ -29,16 +30,10 @@ const NewsList = () => {
 
   return (
     <>
-      <div className="w-full grid grid-cols-3">
+      <div className="w-full mb-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {news.map(({ id, imageUrl, title }) => (
-          <div key={id}>
-            <h1>{title}</h1>
-            <img src={imageUrl} alt={title} />
-          </div>
+          <NewsCard key={id} title={title} url={imageUrl} />
         ))}
-      </div>
-      <div>
-        <h1>ASTROOOOO</h1>
       </div>
     </>
   );
