@@ -10,32 +10,42 @@ interface Props {
 const { url, path, title, text, color } = Astro.props;
 ---
 
-<article class="w-full rounded-lg">
-  <figure class="w-full shadow-xl">
+<article
+  class="w-full rounded-2xl overflow-hidden bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-3xl border-4 border-dashed border-[#ffd166] relative"
+  style={`background-image: repeating-linear-gradient(45deg, rgba(255,214,102,0.15) 0px, rgba(255,214,102,0.15) 4px, transparent 4px, transparent 8px);`}
+>
+  <!-- Imagen -->
+  <figure class="relative w-full overflow-hidden border-b-4 border-[#ffd166]">
     <img
-      class="w-full aspect-[16/11] object-cover rounded-tl-xl rounded-tr-xl"
+      class="w-full aspect-[16/11] object-cover transition-transform duration-500 ease-out hover:scale-105"
       src={url}
       alt={title}
     />
     <figcaption class="sr-only">{title}</figcaption>
   </figure>
+
+  <!-- Contenido -->
   <div
-    class="p-6 grid place-content-center rounded-bl-xl rounded-br-xl"
-    style=`background-color: ${color};`
+    class="p-6 flex justify-center items-center"
+    style={`background-color: ${color}; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.2) 0px, rgba(255,255,255,0.2) 3px, transparent 3px, transparent 6px);`}
   >
     <a
-      class="flex text-89007 items-center justify-center gap-3 bg-white text-base p-4 px-8 font-bold rounded-[3rem] shadow-xl"
+      class="flex items-center justify-center gap-3 bg-white text-base md:text-lg text-89007 font-bold px-8 py-4 rounded-full shadow-xl border-2 border-[#ffd166] transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:rotate-1"
       href={path}
-      >{text}<svg
+      style="font-family: 'Comic Neue', cursive;"
+    >
+      {text}
+      <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="22"
+        height="22"
         viewBox="0 0 24 24"
-        ><path
+      >
+        <path
           fill="#039fcf"
           d="M12.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L16.586 13H5a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414"
-        ></path></svg
-      ></a
-    >
+        ></path>
+      </svg>
+    </a>
   </div>
 </article>

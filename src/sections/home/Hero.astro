@@ -5,6 +5,7 @@ import hero from "@assets/logo/logo-89007.png";
 
 <section class="w-full bg-89007">
   <div class="max-w-xl m-auto lg:grid lg:grid-cols-2 gap-4 lg:max-w-7xl">
+    <!-- Texto -->
     <article
       class="w-full flex justify-center flex-col gap-4 p-8 items-center md:items-start lg:items-start lg:pt-16 lg:pb-16"
     >
@@ -22,15 +23,31 @@ import hero from "@assets/logo/logo-89007.png";
         Solicita información
       </a>
     </article>
+
+    <!-- Imagen con animación -->
     <figure class="grid p-8 items-center place-content-center">
       <Image
-        class="w-full max-w-[10rem] sm:max-w-[13rem]"
+        class="w-full max-w-[10rem] sm:max-w-[13rem] animate-float"
         src={hero}
         alt="Estudiantes del colegio 89007"
         loading="eager"
         format="webp"
-        loading="eager"
       />
     </figure>
   </div>
 </section>
+
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>

@@ -112,6 +112,7 @@ const StartForm = () => {
           />
           <Select
             label="Tipo de documento:"
+            noValue="TIPO DE DOCUMENTO"
             register={register("documentType", {
               required: {
                 value: true,
@@ -121,8 +122,8 @@ const StartForm = () => {
             error={errors.documentType as FieldError}
             options={[
               { value: "dni", label: "DNI" },
-              { value: "carne", label: "Carne de extranjeria" },
-              { value: "pasaporte", label: "Pasaporte" },
+              { value: "carne", label: "CARNE DE EXTRANJERIA" },
+              { value: "pasaporte", label: "PASAPORTE" },
             ]}
           />
           <TextField
@@ -160,6 +161,7 @@ const StartForm = () => {
           />
           <Select
             label="Grado:"
+            noValue="GRADO"
             register={register("degree", {
               required: {
                 value: true,
@@ -168,15 +170,15 @@ const StartForm = () => {
             })}
             error={errors.degree as FieldError}
             options={[
-              { value: "3 años", label: "3 años" },
-              { value: "4 años", label: "4 años" },
-              { value: "5 años", label: "5 años" },
-              { value: "1 primaria", label: "1° primaria" },
-              { value: "2 primaria", label: "2° primaria" },
-              { value: "3 primaria", label: "3° primaria" },
-              { value: "4 primaria", label: "4° primaria" },
-              { value: "5 primaria", label: "5° primaria" },
-              { value: "6 primaria", label: "6° primaria" },
+              { value: "3 años", label: "3 AÑOS" },
+              { value: "4 años", label: "4 AÑOS" },
+              { value: "5 años", label: "5 AÑOS" },
+              { value: "1 primaria", label: "1° PRIMARIA" },
+              { value: "2 primaria", label: "2° PRIMARIA" },
+              { value: "3 primaria", label: "3° PRIMARIA" },
+              { value: "4 primaria", label: "4° PRIMARIA" },
+              { value: "5 primaria", label: "5° PRIMARIA" },
+              { value: "6 primaria", label: "6° PRIMARIA" },
             ]}
           />
         </div>

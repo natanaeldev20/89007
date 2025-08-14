@@ -12,7 +12,6 @@ interface Props {
 }
 
 const ExperienceCard = ({ url, alt, name, role, color, content }: Props) => {
-  //Refs
   const modalRef = useRef<HTMLDialogElement | null>(null);
 
   const handleOpenModal = () => {
@@ -37,16 +36,17 @@ const ExperienceCard = ({ url, alt, name, role, color, content }: Props) => {
 
   return (
     <>
+      {/* MODAL */}
       <dialog
         className="m-auto max-w-[55rem] bg-transparent outline-none border-none backdrop:bg-[#000000c8]"
         ref={modalRef}
         onClick={handleBackdropClose}
       >
-        <div className="px-4 bg-transparent sm:px-6 md:px-8">
-          <article className="w-full bg-white relative rounded-2xl grid grid-cols-1 md:grid-cols-[15rem_minmax(0,1fr)] lg:grid-cols-[20rem_minmax(0,1fr)]">
-            <figure className="w-full bg-amber-300 flex justify-end flex-col items-center px-4 pt-4 rounded-tr-2xl rounded-tl-2xl md:rounded-tl-2xl md:rounded-tr-none md:rounded-bl-2xl shadow-xl">
+        <div className="px-4 sm:px-6 md:px-8">
+          <article className="w-full bg-white relative rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-[15rem_minmax(0,1fr)] lg:grid-cols-[20rem_minmax(0,1fr)]">
+            <figure className="w-full bg-amber-300 flex justify-end flex-col items-center px-4 pt-4 shadow-inner">
               <img
-                className="w-full max-w-[10rem] md:max-w-[18rem] lg:max-w-[18rem]"
+                className="w-full max-w-[12rem] md:max-w-[18rem] drop-shadow-lg animate-float"
                 src={url}
                 alt={alt}
               />
@@ -58,7 +58,7 @@ const ExperienceCard = ({ url, alt, name, role, color, content }: Props) => {
               </p>
             </div>
             <button
-              className="absolute bg-89007 top-2 right-2 transition-all duration-300 rounded-full cursor-pointer shadow-2xl p-1 text-white md:bg-transparent md:text-89007"
+              className="absolute bg-89007 top-2 right-2 transition-all duration-300 rounded-full cursor-pointer shadow-xl p-1 text-white hover:rotate-90"
               onClick={handleCloseModal}
             >
               <IoClose size={35} />
@@ -66,22 +66,24 @@ const ExperienceCard = ({ url, alt, name, role, color, content }: Props) => {
           </article>
         </div>
       </dialog>
-      <article className="w-full relative shadow-xl rounded-2xl">
-        <figure className="w-full pt-8 pl-8 pr-8 flex items-center justify-center bg-amber-300 bg-center bg-auto rounded-tl-2xl rounded-tr-2xl">
+
+      {/* CARD */}
+      <article className="w-full relative shadow-lg rounded-3xl overflow-visible transition-transform duration-400 hover:-translate-y-2">
+        <figure className="w-full pt-8 pl-8 pr-8 flex items-center justify-center bg-amber-300 rounded-t-3xl relative overflow-visible">
           <img
             src={url}
             alt={alt}
-            className="w-full max-w-[10rem] aspect-[9/16] object-cover md:w-full md:max-w-[13rem] lg:w-full"
+            className="w-full max-w-[10rem] aspect-[9/16] object-cover md:max-w-[13rem] lg:max-w-[15rem] drop-shadow-xl"
           />
           <button
-            className="absolute cursor-pointer transition-all duration-300 hover:transform hover:scale-[1.2]"
+            className="absolute bottom-4 right-4 cursor-pointer transition-transform duration-300 hover:scale-110"
             onClick={handleOpenModal}
           >
-            <FaEye size={80} color="#ffffffe2" />
+            <FaEye size={60} color="#ffffffe2" />
           </button>
         </figure>
         <div
-          className="w-full p-4 rounded-bl-2xl rounded-br-2xl"
+          className="w-full p-4 rounded-b-3xl"
           style={{ backgroundColor: `${color}` }}
         >
           <p className="text-2xl capitalize font-semibold text-white text-center mb-1">

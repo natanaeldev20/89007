@@ -34,10 +34,25 @@ const {
   </div>
   <figure class={`w-full ${orderImageMobile} ${orderImageDesktop}`}>
     <img
-      class="w-full aspect-video object-cover shadow-xl rounded-lg"
+      class="w-full aspect-video object-cover shadow-xl rounded-lg animate-float"
       src={url}
       alt={title}
     />
     <figcaption class="sr-only">{title}</figcaption>
   </figure>
 </article>
+
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>

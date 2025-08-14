@@ -103,6 +103,7 @@ const InitialForm = () => {
           />
           <Select
             label="Tipo de documento:"
+            noValue="Tipo de documento"
             register={register("documentType", {
               required: {
                 value: true,
@@ -151,6 +152,7 @@ const InitialForm = () => {
           />
           <Select
             label="Grado:"
+            noValue="Grado"
             register={register("degree", {
               required: {
                 value: true,

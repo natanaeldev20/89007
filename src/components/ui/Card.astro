@@ -9,6 +9,44 @@ interface Props {
 const { title, content, url, color } = Astro.props;
 ---
 
+<article
+  class="w-full h-full flex flex-col rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 hover:-translate-y-1"
+>
+  <!-- Imagen con zoom -->
+  <figure class="w-full overflow-hidden">
+    <img
+      class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
+      src={url}
+      alt={title}
+    />
+    <figcaption class="sr-only">{title}</figcaption>
+  </figure>
+
+  <!-- Contenido -->
+  <div
+    class="w-full p-6 text-white flex flex-col gap-4 flex-1"
+    style={`background-color: ${color}`}
+  >
+    <h3 class="font-semibold text-xl md:text-2xl tracking-tight">
+      {title}
+    </h3>
+    <p class="text-base opacity-90 leading-relaxed">
+      {content}
+    </p>
+  </div>
+</article>
+
+<!-- ---
+interface Props {
+  title: string;
+  content: string;
+  url: string;
+  color: string;
+}
+
+const { title, content, url, color } = Astro.props;
+---
+
 <article class="w-full h-full flex flex-col rounded-2xl shadow-xl">
   <figure class="w-full">
     <img
@@ -25,4 +63,4 @@ const { title, content, url, color } = Astro.props;
     <h3 class="font-semibold text-xl md:text-2xl lg:text-2xl">{title}</h3>
     <p class="text-base">{content}</p>
   </div>
-</article>
+</article> -->

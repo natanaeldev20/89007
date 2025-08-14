@@ -12,18 +12,28 @@ interface Props {
 const { url, title, description, route, color } = Astro.props;
 ---
 
-<article class="shadow-xl rounded-2xl" style=`background-color: ${color};`>
-  <figure class="w-full">
+<article
+  class="rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+  style={`background-color: ${color};`}
+>
+  <!-- Imagen con animación -->
+  <figure class="w-full overflow-hidden">
     <img
-      class="w-full aspect-video object-cover rounded-t-2xl"
+      class="w-full aspect-video object-cover transition-transform duration-500 hover:scale-105"
       src={url}
       alt={title}
       loading="lazy"
     />
   </figure>
-  <div class="w-full p-8 text-white">
-    <h3 class="text-xl font-semibold mb-4 md:text-2xl">{title}</h3>
-    <p class="text-base mb-8">{description}</p>
+
+  <!-- Contenido -->
+  <div class="w-full p-8 text-white flex flex-col justify-between h-full">
+    <div>
+      <h3 class="text-xl md:text-2xl font-bold mb-4 leading-snug">{title}</h3>
+      <p class="text-base opacity-90 mb-8">{description}</p>
+    </div>
+
+    <!-- Botón -->
     <Button
       url={route}
       bg="#fff"
@@ -34,15 +44,15 @@ const { url, title, description, route, color } = Astro.props;
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
-        ><path
+      >
+        <path
           fill="#000"
           d="M12.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L16.586 13H5a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414"
-          ><path><svg> </svg> </path>
-        </path>
-      </svg></Button
-    >
+        ></path>
+      </svg>
+    </Button>
   </div>
 </article>
