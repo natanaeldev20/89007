@@ -1,5 +1,5 @@
 const WhatsAppButton = () => {
-  const phoneNumber = "992232493";
+  const phoneNumber = "983152206";
   const message = "Necesito informacion sobre el proceso de admision.";
 
   const handleClick = () => {
