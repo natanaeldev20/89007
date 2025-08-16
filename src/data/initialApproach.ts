@@ -33,7 +33,7 @@ export const initialApproach = [
   },
   {
     id: 5,
-    url: "https://home.worldvisionamericalatina.org/wp-content/uploads/2023/06/Educacion-inicial-banner.jpg",
+    url: "https://elcarmelocusco.edu.pe/wp/wp-content/uploads/2021/04/familia.jpg",
     title: "Participación activa de las familias",
     content:
       "El trabajo conjunto entre la institución y la familia es esencial. Se promueve la participación de los padres en actividades escolares, fortaleciendo el vínculo entre el hogar y la escuela.",
