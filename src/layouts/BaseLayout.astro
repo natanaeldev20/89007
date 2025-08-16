@@ -1,9 +1,11 @@
 ---
 interface Props {
   title: string;
+  description: string;
+  url: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 import "../styles/global.css";
 //Fonts
@@ -22,13 +24,72 @@ import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
+    <!-- OPEN GRAPH -->
+
+    <meta property="og:title" content={Astro.props.title} />
+    <meta
+      property="og:description"
+      content={Astro.props.description}
+    />
+    <meta property="og:image" content="/ie89007.jpeg" />
+    <meta
+      property="og:image:alt"
+      content="Fotografía de la Institución Educativa No. 89007"
+    />
+    <meta
+      property="og:url"
+      content={Astro.props.url}
+    />
+    <meta property="og:site_name" content="Institución Educativa N° 89007" />
+    <meta property="og:locale" content="es_PE" />
+
+    <!-- TWITTER CARDS -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={Astro.props.title} />
+    <meta
+      name="twitter:description"
+      content={Astro.props.description}
+    />
+    <meta name="twitter:image" content="/ie89007.jpeg" />
+    <meta
+      name="twitter:image:alt"
+      content="Fotografía de la Institución Educativa N° 89007"
+    />
+    <meta name="twitter:site" content="@ie89007" />
+    <meta name="twitter:creator" content="@ie89007" />
+
+    <link
+      rel="canonical"
+      href="https://institucioneducativa89007-4fzq.vercel.app"
+    />
     <link rel="shortcut icon" href="/logo-89007-v2.png" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+
+ <script type="application/ld+json" is:inline>
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Institución Educativa N.º 89007",
+  "url": url,
+  "logo": "https://institucioneducativa89007-4fzq.vercel.app/logo-89007-v2.png",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chimbote",
+    "addressCountry": "PE"
+  }
+})}
+</script>
+
+
     <ClientRouter />
   </head>
   <body>

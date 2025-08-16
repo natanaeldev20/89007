@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://institucioneducativa89007-4fzq.vercel.app/sitemap.xml
