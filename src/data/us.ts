@@ -17,7 +17,7 @@ export const us = [
   },
   {
     id: 3,
-    url: "https://www.sir.edu.pe/storage/2025/02/6.jpg", // No se puede optimizar desde Cloudinary
+    url: "https://res.cloudinary.com/dezz9ntar/image/upload/f_auto,q_auto,w_800/v1753142733/IMG_20250625_164004_zx63sf.jpg", // No se puede optimizar desde Cloudinary
     title: "Historia",
     description: "",
     bg: "#ff640a",

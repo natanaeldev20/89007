@@ -31,9 +31,12 @@ const Header = () => {
         {/* Menu Desktop */}
         <nav className="hidden md:flex items-center gap-6">
           <div className="relative group">
-            <button className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <a
+              className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              href="/nosotros"
+            >
               Nosotros <IoIosArrowDown className="mt-[1px]" />
-            </button>
+            </a>
             <ul className="absolute left-0 top-full w-max p-6 gap-6 grid grid-cols-1 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out">
               <MegaLink
                 href="/nosotros/quienes-somos"
