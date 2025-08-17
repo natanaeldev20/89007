@@ -2,6 +2,7 @@ import { getNews } from "@services/newsService";
 import NewsCard from "@components/news/NewsCard";
 import type { News } from "@services/newsService";
 import { useState, useEffect } from "react";
+import NewsSkeleton from "./NewsSkeleton";
 
 const NewsList = () => {
   const [news, setNews] = useState<News[]>([]);
@@ -24,7 +25,7 @@ const NewsList = () => {
     getNewsAll();
   }, []);
 
-  if (loading) return <p>Cargando noticias...</p>;
+  if (loading) return <NewsSkeleton />;
 
   return (
     <>

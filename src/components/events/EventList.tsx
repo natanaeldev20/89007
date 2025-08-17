@@ -2,6 +2,7 @@ import { getEvents } from "@services/eventService";
 import EventCard from "@components/events/EventCard";
 import type { Event } from "@services/eventService";
 import { useState, useEffect } from "react";
+import EventSkeleton from "./EventSkeleton";
 
 const EventList = () => {
   const [events, setEvents] = useState<Event[]>([]);
@@ -24,7 +25,7 @@ const EventList = () => {
     getEvent();
   }, []);
 
-  if (loading) return <p>Cargando eventos...</p>;
+  if (loading) return <EventSkeleton />;
 
   return (
     <>
